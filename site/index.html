@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+
+        <!-- Basic Page Needs
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <meta charset="utf-8">
+        <title>What Do I Need To Make?</title>
+        <meta name="description" content="Online grade calculator to help students know what score is needed on an exam to acheive a grade in a class.">
+        <meta name="author" content="">
+
+        <!-- Mobile Specific Metas
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- FONT
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+        <!-- CSS
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/skeleton.css">
+
+        <!-- Favicon
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+    </head>
+    <body>
+
+        <!-- Primary Page Layout
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <div class="container">
+            <div class="row">
+                <div class="two-thirds column" style="margin-top: 10%">
+                    <h4>What Do I Need To Make?</h4>
+                    <p>If you know what you made for each of your grading periods, our tool can tell you what grade you need on your exam for your desired letter grade.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="two-thirds column">
+                    <form id="myForm">
+                        <div class="row">
+                            <div class="four columns">
+                                <label for="txtFirstGrade">First 9 Weeks Grade</label>
+                                <input class="u-full-width" type="number" placeholder="91" id="txtFirstGrade" max="110" min="0">
+                            </div>
+                            <div class="four columns">
+                                <label for="txtSecondGrade">Second 9 Weeks Grade</label>
+                                <input class="u-full-width" type="number" placeholder="89" id="txtSecondGrade" max="110" min="0">
+                            </div>
+                            <div class="four columns">
+                                <label for="ddExamWeight">Weight Of Exam</label>
+                                <select class="u-full-width" id="ddExamWeight">
+                                    <option value="10">10%</option>
+                                    <option value="15">15%</option>
+                                    <option value="20" selected>20%</option>
+                                    <option value="25">25%</option>
+                                    <option value="30">30%</option>
+                                    <option value="35">35%</option>
+                                    <option value="40">40%</option>
+                                    <option value="45">45%</option>
+                                    <option value="50">50%</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="eight columns">
+                                <input class="button-primary" type="button" value="Calculate" onclick="getNeeded();">
+                                <input type="button" value="Reset" onclick="resetForm();">
+                            </div>
+                            <div class="four columns">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="cbTenPointScale">
+                                    <span class="label-body">Use 10 point scale</span>
+                                </label>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="two-thirds column">
+                    <table class="u-full-width" id="standard-grade-table" style="display:none;">
+                        <thead>
+                            <tr>
+                                <th>To Make</th>
+                                <th>I Need</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><b>A </b><span id="scale0">(100 - 93)</span></td>
+                                <td id="holder0"></td>
+                            </tr>
+                            <tr>
+                                <td><b>B</b> <span id="scale1">(92 - 85)</span></td>
+                                <td id="holder1"></td>
+                            </tr>
+                            <tr>
+                                <td><b>C</b> <span id="scale2">(84 - 75)</span></td>
+                                <td id="holder2"></td>
+                            </tr>
+                            <tr>
+                                <td><b>D</b> <span id="scale3">(74 - 67)</span></td>
+                                <td id="holder3"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+
+        <script type="text/javascript" src="scripts/app.js"></script>
+        <script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
+        <script type="text/javascript">window.dojoRequire(["mojo/signup-forms/Loader"], function (L) { L.start({ "baseUrl": "mc.us4.list-manage.com", "uuid": "765c0a1aba697e50d3437c20f", "lid": "4e36917cf0", "uniqueMethods": true }) })</script>
+        <!-- End Document
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    </body>
+</html>
